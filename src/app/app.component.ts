@@ -24,7 +24,15 @@ import { Component } from "@angular/core";
             <td>{{ep.sal | currency}}</td>
             <td>{{ep.sal | tax | currency:"INR"}}</td>
             <td>{{ep.doj | date:"dd/MM/y"}}</td>
-            <td>{{ep.retired}}</td>
+            <td>
+                <img *ngIf="ep.retired" src="https://www.icegif.com/wp-content/uploads/2022/04/icegif-931.gif" height="100" width="100"/>
+                <img *ngIf="!ep.retired" src="https://media1.tenor.com/images/8f2b95f4a81cbcc482f2fd81b42baa10/tenor.gif?itemid=17302700" height="100" width="100"/>
+            </td>
+            <td> 
+                <div *ngIf="ep.retired; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><img src="https://www.icegif.com/wp-content/uploads/2022/04/icegif-931.gif" height="100" width="100"/></ng-template>
+                <ng-template #elseBlock><img src="https://media1.tenor.com/images/8f2b95f4a81cbcc482f2fd81b42baa10/tenor.gif?itemid=17302700" height="100" width="100"/></ng-template>            
+            </td>
         </tr>
     </table>
 
