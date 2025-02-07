@@ -20,10 +20,9 @@ import { Component } from "@angular/core";
             <td>{{ep.ename | uppercase}}</td>
             <td>{{ep.ename | slice:2}}</td>
             <td>{{ep.ename | slice:2:4}}</td>
-            <td>{{ep.gender}}</td>
-            <td>{{ep.sal | number}}</td>
+            <td>{{ep.gender | gender}}</td>
             <td>{{ep.sal | currency}}</td>
-            <td>{{ep.sal | currency:"INR"}}</td>
+            <td>{{ep.sal | tax | currency:"INR"}}</td>
             <td>{{ep.doj | date:"dd/MM/y"}}</td>
             <td>{{ep.retired}}</td>
         </tr>
