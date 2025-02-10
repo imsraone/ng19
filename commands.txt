@@ -1,0 +1,5 @@
+Create Componenet:
+
+ng generate component tform
+
+ng g c rform

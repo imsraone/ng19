@@ -6,11 +6,13 @@ import { NestedComponent } from "./nested.component";
 import { GenderPipe } from "./gender.pipe";
 import { TaxPipe } from "./tax.pipe";
 import { FormsModule } from "@angular/forms";
+import { TformComponent } from './tform/tform.component';
+import { RformComponent } from './rform/rform.component';
 
 @NgModule({
     imports : [BrowserModule, FormsModule],
-    declarations: [AppComponent, AnotherComponent,NestedComponent, GenderPipe,TaxPipe],
-    bootstrap:[AppComponent,AnotherComponent]
+    declarations: [AppComponent, AnotherComponent,NestedComponent, GenderPipe,TaxPipe, TformComponent, RformComponent],
+    bootstrap:[AppComponent,AnotherComponent, TformComponent]
 })
 export class AppModule{
 
