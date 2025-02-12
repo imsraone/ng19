@@ -1,0 +1,8 @@
+<p>detailapi works!</p>
+
+<form #idForm="ngForm" (ngSubmit)="submit(idForm.value)">
+    <input type="number" min="1" max="10" placeholder="id" name="id" ngModel required> <br/>
+    <input type="submit" [disabled]="idForm.invalid"/>
+    <br/>
+    </form>
+    {{userdata | json}}
